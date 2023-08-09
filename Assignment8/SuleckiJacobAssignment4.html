@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jacob M. Sulecki">
+    <meta name="keywords" content="Lifting, Weights, Diet, Muscle, Lean, Cardiovascular, Exercise">
+    <meta name="descriprion" content="Info about weight lifting and how it can make you feel healthier">
+    <link rel="stylesheet" href="SuleckiJacobAssignment4.css">
+    <link rel="stylesheet" href="form.css">
+    <title>Jacob Sulecki Assignment 1: Fitness & Lifting</title>
+    <script src="https://kit.fontawesome.com/2c0ecefa9f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <section class="top-banner">
+        <div class="logo">
+            <h1>HLJS</h1>
+        </div>
+
+        <nav>
+            <a href="SuleckiJacobAssignment4.html">HOME</a>
+            <a href="bmi.html">BMI CALC</a>
+            <a href="Diet.html">DIET</a>
+            <a href="About.html">ABOUT</a>
+            <a href="reference.html">REFERENCE</a>
+        </nav>
+    </section>
+
+    <main>
+        <header>
+            <img src="img/amenities_banner_the_chase_2076-a05a2a01ae2bfa5287c5fd812212142c.jpeg" alt="picture of weights (barbell)">
+        </header>
+
+        <h1 class="title">Heathy Living: Jacob Sulecki</h1>
+
+        <section>
+
+            <article>
+                <h3>My Journey</h3>
+            
+                <p>
+                For a while now I have been on and off self teaching myself how to lift. A lot of people lift for the 
+                looks, the strength, the clout, or for competition. Personally none of these have ever stood out to me as interesting.
+                What has is the fact that lifting has a very good effect on your health. Though it is not nearly as good for cardiovascular health.
+                Lifting and getting up and moving in general is good for overall health in this crazy world we live in. 
+                </p>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <h3>Some Benefits</h3>
+
+                <p>
+                Mental health has been under the microscope since people started to talk about it more often likely because of the internet. Any sort
+                of exercise is going to release endorphins that make you feel good and put you in a good mindset to have a better day. You can use different
+                lifting techniques in order to achieve different results. You could lose intra-muscular fat in order to appear more lean. And on the other side, heavy lifting paired with a big diet
+                can make you grow huge if that is your goal. Not only does it strengthen your muscles, it will prevent the risk of joint injuries in everyday life because they will get used to micro-stress
+                thus growing stronger each time.
+                </p>
+            </article>
+        </section>
+
+
+        <section>
+            <article>
+                <h3>Where to Start</h3>
+                <p>
+                Like I said above, there are so many different ways to train depending on your goals. If you're like me, young and naturally skinny with 
+                a fast metabolism and you want to be bigger. You really want to focus on your diet. You should eat way more calories a day than you could possibly burn while working out.
+                With that dies you hant to be lifting really heavy weight for not as many repetitions. I would say sticking to 3 sets of 5-8 reps per exercise is good for growing in mass for mu body type.
+                Now if you were wanting to lose weight, you need to be in a caloric deficit. This means that you need to eat less calories than you burn a day in order to lose body weight and fat. Pairing
+                This with a lifting routine will help you lose intra-muscular fat and have you looking really lean. For this goal I would do lower weight and higher reps per exercise. Also I would pair exercise 
+                so that I'm doing one after the other so that it is mor intense.
+                </p>
+            </article>
+        </section>
+
+    </main>
+
+    <section class="popUp">
+        <h1>Please fill out the form and attach a file of your goals</h1>
+
+        <form action="https://sheetdb.io/api/v1/rgqmadihtu46w" method="post" autocomplete="on" id="sheetdb-form">   <!--The instructions did't say were to post to so I posted to a google sheet I will try to share with you-->
+
+            <div class="personal">
+                <label for="firstName">First Name: </label> <br>
+                <input type="text" name="data[fName]" id="firstName" required placeholder="Joe"> <br>
+
+                <label for="lastName">Last Name: </label> <br>
+                <input type="text" name="data[lName]" id="lastName" required placeholder="Shmoe"> <br>
+
+                <label for="email">Email:</label> <br>
+                <input type="email" name="data[email]" id="email"><br>
+
+                <label for="number">Phone Number:</label><br>
+                <input type="tel" name="data[number]" id="number" required placeholder="(111)123-456">
+
+                <label for="DoB">Date of Birth:</label><br>
+                <input type="date" name="data[DoB]" id="DoB" required>
+
+                <h4>please select your gender</h4>
+                <input type="radio" name="data[male]" value="male" id="male">
+                <label for="male">Male</label> <br>
+
+                <input type="radio" name="data[female]" value="female" id="female">
+                <label for="female">Female</label> <br>
+
+                <input type="radio" name="data[other]" value="other" id="other">
+                <label for="other">Prefer not to answer (Other)</label> <br>
+            </div>
+
+
+            <div class="workout-info">
+
+                <h4>Please select all the type of workout goal you would Like:</h4>
+                
+                <input type="checkbox" name="data[fat]" value="Fat-burning" id="fat">
+                <label for="fat">Burn Fat</label> <br>
+
+                <input type="checkbox" name="data[lose-weight]" value="lose-weight" id="lose-weight">
+                <label for="lose-weight"> Lose Weight </label> <br>
+
+                <input type="checkbox" name="data[gain-weight]" value="gain-weight" id="gain-weight">
+                <label for="gain-weight"> Gain Weight </label> <br>
+
+                <input type="checkbox" name="data[build-muscle]" value="build-muscle" id="build-muscle">
+                <label for="build-muscle">Build Muscle</label> <br>
+
+                <input type="checkbox" name="data[muscle-endurance]" value="muscle-endurance" id="muscle-endurance">
+                <label for="muscle-endurance">Muscle Endurance</label> <br>
+
+                <input type="checkbox" name="data[heavy-lift]" value="heavy-lift" id="heavy-lift">
+                <label for="heavy-lift">One time Heavy lifts</label> <br><br>
+
+
+                <label for="days-a-week">Select the days per week you would like to work out:</label><br>
+                <input  type="range" name="data[freq]" value="1" min="1" max="7" oninput="this.nextElementSibling.value = this.value" id="days-a-week">
+                <output>1</output><br>
+
+                <label for="eat">How many time a day do you usually eat?:</label><br>
+                <input type="number" name="data[eat]" id="eat" min="1" required>
+
+                <label for="time">What time do you want to complete your workout?:</label><br>
+                <input type="time" name="data[time]" id="time"><br>
+
+                <label for="more-info">Let me know other goals or anything that you think would be helpful to your routine! (please be descriptive):</label> <br>
+                <textarea name="data[more-info]" id="more-info"></textarea> <br>
+            </div>
+
+            <div class="dragDropArea">
+                <i class="fa-solid fa-upload"></i>
+                <h3 class="oldText">Drag and drop your fitness goals so I can make you a plan!</h3>
+                <button>Upload</button>
+                <input id="hide" type="file" hidden>
+            </div>
+
+            <input class="end-btn" type="reset" value="Reset">
+            <input class="end-btn" type="submit" value="Submit">
+           
+        </form>
+    </section>
+
+    <aside>
+        <p>Start your workout plan</p>
+        <button onclick="showForm()">NOW!</button>
+    </aside>
+
+    <footer>
+        <h2>Heathy Living: Jacob Sulecki</h2>
+        <p>Like what you see?</p>
+        <p>follow our socials below and contact us</p>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="form.js"></script>
+
+</body>
+</html>

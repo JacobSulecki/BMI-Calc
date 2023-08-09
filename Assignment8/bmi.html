@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jacob M. Sulecki">
+    <meta name="keywords" content="Lifting, Weights, Diet, Muscle, Lean, Cardiovascular, Exercise">
+    <meta name="descriprion" content="Info about weight lifting and how it can make you feel healthier">
+    <link rel="stylesheet" href="SuleckiJacobAssignment4.css">
+    <link rel="stylesheet" href="form.css">
+    <title>Jacob Sulecki Assignment 1: Fitness & Lifting BMI page</title>
+</head>
+<body>
+
+    <section class="top-banner">
+        <div class="logo">
+            <h1>HLJS</h1>
+        </div>
+
+        <nav>
+            <a href="SuleckiJacobAssignment4.html">HOME</a>
+            <a href="bmi.html">BMI CALC</a>
+            <a href="Diet.html">DIET</a>
+            <a href="About.html">ABOUT</a>
+            <a href="reference.html">REFERENCE</a>
+        </nav>
+    </section>
+
+    <main>
+        <header>
+            <img src="img/bmi.jpeg" alt="picture of weights (barbell)">
+        </header>
+
+        <h1 class="title">Heathy Living: Jacob Sulecki</h1>
+
+        <section>
+
+            <label>
+                <input id="h-input" type="number" placeholder="Height in INCHES: ">
+            </label> 
+
+            <label>
+                <input id="w-input" type="number" placeholder="Weight in LBS: ">
+            </label>  
+
+            <button type="submit" onclick="Calculate()">Calculate BMI</button>
+                
+            <div class="bmi-value">
+                <h4>BMI Value: </h4>
+                <div id="bmi-output"></div>
+            </div>
+
+            <div class="status">
+                <h4>Status: </h4>
+                <div id="bmi-status"></div>
+            </div>   
+
+        </section>
+    </main>
+
+    <section class="popUp">
+        <h1>Please fill out the form and attach a file of your goals</h1>
+
+        <form action="https://sheetdb.io/api/v1/rgqmadihtu46w" method="post" autocomplete="on" id="sheetdb-form">   <!--The instructions did't say were to post to so I posted to a google sheet I will try to share with you-->
+
+            <div class="personal">
+                <label for="firstName">First Name: </label> <br>
+                <input type="text" name="data[fName]" id="firstName" required placeholder="Joe"> <br>
+
+                <label for="lastName">Last Name: </label> <br>
+                <input type="text" name="data[lName]" id="lastName" required placeholder="Shmoe"> <br>
+
+                <label for="email">Email:</label> <br>
+                <input type="email" name="data[email]" id="email"><br>
+
+                <label for="number">Phone Number:</label><br>
+                <input type="tel" name="data[number]" id="number" required placeholder="(111)123-456">
+
+                <label for="DoB">Date of Birth:</label><br>
+                <input type="date" name="data[DoB]" id="DoB" required>
+
+                <h4>please select your gender</h4>
+                <input type="radio" name="data[male]" value="male" id="male">
+                <label for="male">Male</label> <br>
+
+                <input type="radio" name="data[female]" value="female" id="female">
+                <label for="female">Female</label> <br>
+
+                <input type="radio" name="data[other]" value="other" id="other">
+                <label for="other">Prefer not to answer (Other)</label> <br>
+            </div>
+
+
+            <div class="workout-info">
+
+                <h4>Please select all the type of workout goal you would Like:</h4>
+                
+                <input type="checkbox" name="data[fat]" value="Fat-burning" id="fat">
+                <label for="fat">Burn Fat</label> <br>
+
+                <input type="checkbox" name="data[lose-weight]" value="lose-weight" id="lose-weight">
+                <label for="lose-weight"> Lose Weight </label> <br>
+
+                <input type="checkbox" name="data[gain-weight]" value="gain-weight" id="gain-weight">
+                <label for="gain-weight"> Gain Weight </label> <br>
+
+                <input type="checkbox" name="data[build-muscle]" value="build-muscle" id="build-muscle">
+                <label for="build-muscle">Build Muscle</label> <br>
+
+                <input type="checkbox" name="data[muscle-endurance]" value="muscle-endurance" id="muscle-endurance">
+                <label for="muscle-endurance">Muscle Endurance</label> <br>
+
+                <input type="checkbox" name="data[heavy-lift]" value="heavy-lift" id="heavy-lift">
+                <label for="heavy-lift">One time Heavy lifts</label> <br><br>
+
+
+                <label for="days-a-week">Select the days per week you would like to work out:</label><br>
+                <input type="range" name="data[freq]" value="1" min="1" max="7" oninput="this.nextElementSibling.value = this.value" id="days-a-week">
+                <output>1</output><br>
+
+                <label for="eat">How many time a day do you usually eat?:</label><br>
+                <input type="number" name="data[eat]" id="eat" min="1" required>
+
+                <label for="time">What time do you want to complete your workout?:</label><br>
+                <input type="time" name="data[time]" id="time"><br>
+
+                <label for="more-info">Let me know other goals or anything that you think would be helpful to your routine! (please be descriptive):</label> <br>
+                <textarea name="data[more-info]" id="more-info"></textarea> <br>
+            </div>
+
+            <div class="dragDropArea">
+                <i class="fa-solid fa-upload"></i>
+                <h3 class="oldText">Drag and drop your fitness goals so I can make you a plan!</h3>
+                <button>Upload</button>
+                <input id="hide" type="file" hidden>
+            </div>
+
+            <input class="end-btn" type="reset" value="Reset">
+            <input class="end-btn" type="submit" value="Submit">
+           
+        </form>
+    </section>
+
+    <aside>
+        <p>Start your workout plan</p>
+        <button onclick="showForm()">NOW!</button>
+    </aside>
+
+    <footer>
+        <h2>Heathy Living: Jacob Sulecki</h2>
+        <p>Like what you see?</p>
+        <p>follow our socials below and contact us</p>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="form.js"></script>
+
+</body>
+</html>
